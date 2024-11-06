@@ -3,7 +3,7 @@
  * Plugin Name: Kntnt Instant Pages
  * Plugin URI: https://github.com/Kntnt/kntnt-instant-pages
  * Description: Implements instant.page preloading for faster page navigation.
- * Version: 1.0.0
+ * Version: 1.0.1
  * Requires at least: 5.0
  * Requires PHP: 8.0
  * Author: Thomas Barregren
