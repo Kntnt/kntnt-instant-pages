@@ -1,0 +1,22 @@
+{
+  "name": "kntnt/kntnt-instant-pages",
+  "version": "1.0.0",
+  "description": "WordPress plugin that preloads pages on hover and click for faster page navigation.",
+  "type": "wordpress-plugin",
+  "require": {
+    "php": ">=8.0"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^3.7",
+    "wp-coding-standards/wpcs": "^3.0"
+  },
+  "scripts": {
+    "phpcs": "phpcs -v -d memory_limit=512M --standard=WordPress -s includes/class-plugin.php",
+    "phpcbf": "phpcbf -d memory_limit=512M --standard=WordPress includes/class-plugin.php"
+  },
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  }
+}

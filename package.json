@@ -1,0 +1,13 @@
+{
+  "name": "kntnt-instant-pages",
+  "version": "1.0.0",
+  "description": "WordPress plugin that preloads pages on hover and click for faster page navigation.",
+  "scripts": {
+    "postinstall": "cp node_modules/instant.page/instantpage.js js/instant.page.js",
+    "check-updates": "npm outdated instant.page",
+    "update-script": "npm update instant.page && npm install"
+  },
+  "dependencies": {
+    "instant.page": "^5.2.0"
+  }
+}
