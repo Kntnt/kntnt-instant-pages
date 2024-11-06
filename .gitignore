@@ -3,5 +3,4 @@
 composer.phar
 composer.lock
 package-lock.json
-js/instant.page.js
 .DS_Store
