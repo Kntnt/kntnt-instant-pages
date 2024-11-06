@@ -34,7 +34,7 @@ class Plugin {
 		}
 
 		// Enqueue the checker script in footer for proper loading order
-		wp_enqueue_script( handle: 'kntnt-instant-pages', src: "{$this->plugin_url}js/kntnt-instant-pages.js", deps: [], ver: $this->plugin_version, in_footer: true );
+		wp_enqueue_script( handle: 'kntnt-instant-pages', src: "{$this->plugin_url}js/kntnt-instant-pages.js", deps: [], ver: $this->plugin_version, args: true );
 
 		// Configure script
 		wp_localize_script( handle: 'kntnt-instant-pages', object_name: 'kntntInstantPages', l10n: [
