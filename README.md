@@ -52,10 +52,9 @@ The plugin is designed to work alongside the Speculation Rules API. If the Specu
 ├── includes/
 │   └── class-plugin.php
 ├── js/
-│   ├── instant.page.js
-│   └── kntnt-instant-pages.js
-└── languages/
-    └── .gitkeep
+    ├── instant.page.js
+    └── kntnt-instant-pages.js
+
 ```
 
 ### Key Features
