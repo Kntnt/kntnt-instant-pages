@@ -6,11 +6,11 @@ WordPress plugin that preloads pages on hover and click for faster page navigati
 
 This plugin uses the lightweight (1 kB) [instant.page](https://instant.page/) script for just-in-time preloading for faster user navigation – it preloads a page right before a user clicks on it.
 
-The plugin is designed to work alongside the Speculation Rules API. If the Speculation Rules plugin is active and the browser supports it, instant.page will not be loaded, deferring to the native browser implementation instead.
+The plugin is designed to work alongside the [Speculative Loading](https://wordpress.org/plugins/speculation-rules/) plugin. If the Speculative Loading plugin is activated and and the browser supports the [Speculation Rules API](https://developer.mozilla.org/en-US/docs/Web/API/Speculation_Rules_API), instant.page will not be loaded, deferring to the native browser implementation instead.
 
 ## Requirements
 
-- WordPress 5.0 or higher (due to JavaScript module handling)
+- WordPress 5.0 or higher
 - PHP 8.0 or higher
 - Modern browsers that support JavaScript modules
 
@@ -44,17 +44,18 @@ The plugin is designed to work alongside the Speculation Rules API. If the Specu
 ### Directory Structure
 ```
 .
+├── .gitattributes
 ├── .gitignore
 ├── composer.json
-├── package.json
-├── README.md
-├── kntnt-instant-pages.php
 ├── includes/
 │   └── class-plugin.php
 ├── js/
-    ├── instant.page.js
-    └── kntnt-instant-pages.js
-
+│   ├── instant.page.js
+│   └── kntnt-instant-pages.js
+├── kntnt-instant-pages.php
+├── LICENSE
+├── package.json
+└── README.md
 ```
 
 ### Key Features
@@ -65,6 +66,25 @@ The plugin is designed to work alongside the Speculation Rules API. If the Specu
 - No configuration needed - works out of the box
 - Loads scripts in footer for optimal performance
 - Skips loading in admin area and customizer
+
+### Filters
+
+#### `kntnt-instant-pages-skip`
+Controls whether the instant pages functionality should be skipped for the current request.
+
+**Parameters:**
+- `$is_skipping` (bool) Whether to skip loading instant pages. Default: `false`
+
+**Example:**
+
+```php
+// Disable instant pages on specific post types
+add_filter( 'kntnt-instant-pages-skip', function( $is_skipping ) {
+    if ( is_singular( 'product' ) ) {
+        return true;
+    }
+    return $is_skipping;
+});
 
 ### Building and Testing
 
