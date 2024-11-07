@@ -18,10 +18,10 @@ The plugin is designed to work alongside the [Speculative Loading](https://wordp
 
 ### For Users
 
-1. Download the plugin zip file
-2. Go to WordPress admin panel → Plugins → Add New
-3. Click "Upload Plugin" and select the downloaded zip file
-4. Activate the plugin
+1. [Download the plugin zip file.](https://github.com/Kntnt/kntnt-instant-pages/releases/latest/download/kntnt-instant-pages.zip)
+2. Go to WordPress admin panel → Plugins → Add New.
+3. Click "Upload Plugin" and select the downloaded zip file.
+4. Activate the plugin.
 
 ### For Developers
 
@@ -37,7 +37,7 @@ The plugin is designed to work alongside the [Speculative Loading](https://wordp
    composer install
    ```
 
-3. The `npm install` command will automatically copy the instant.page script to the correct location.
+The `npm install` command will automatically copy the instant.page script to the correct location.
 
 ## Development
 
@@ -85,8 +85,14 @@ add_filter( 'kntnt-instant-pages-skip', function( $is_skipping ) {
     }
     return $is_skipping;
 });
+```
 
 ### Building and Testing
+
+- Build zip file that can be uploaded to WordPress:
+  ```bash
+  composer run-script build
+  ```
 
 - Run PHP CodeSniffer:
   ```bash
@@ -102,7 +108,7 @@ add_filter( 'kntnt-instant-pages-skip', function( $is_skipping ) {
   ```bash
   npm run update-script
   ```
-
+  
 ## Contributing
 
 1. Fork the repository
