@@ -1,6 +1,7 @@
-/vendor/
+/dist/
 /node_modules/
-composer.phar
-composer.lock
-package-lock.json
+/vendor/
 .DS_Store
+composer.lock
+composer.phar
+package-lock.json
