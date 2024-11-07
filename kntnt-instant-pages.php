@@ -11,7 +11,7 @@
  * License: GPL v3 or later
  * License URI: https://www.gnu.org/licenses/gpl-3.0.html
  *
- * @package KntntInstantPages
+ * @package Kntnt_Instant_Pages
  */
 
 declare(strict_types=1);
