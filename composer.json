@@ -13,10 +13,29 @@
   "scripts": {
     "phpcs": "phpcs -v -d memory_limit=512M --standard=WordPress -s kntnt-instant-pages.php includes/class-plugin.php",
     "phpcbf": "phpcbf -d memory_limit=512M --standard=WordPress kntnt-instant-pages.php includes/class-plugin.php",
+    "build": [
+      "rm -rf dist",
+      "mkdir -p dist/kntnt-instant-pages",
+      "cp -R includes js LICENSE README.md kntnt-instant-pages.php dist/kntnt-instant-pages/",
+      "cd dist && zip -r kntnt-instant-pages.zip kntnt-instant-pages && rm -rf kntnt-instant-pages"
+    ]
   },
   "config": {
     "allow-plugins": {
       "dealerdirect/phpcodesniffer-composer-installer": true
     }
+  },
+  "archive": {
+    "exclude": [
+      "/dist",
+      "/vendor",
+      "/node_modules",
+      "/.gitattributes",
+      "/.gitignore",
+      "/composer.json",
+      "/composer.lock",
+      "/package.json",
+      "/package-lock.json"
+    ]
   }
 }
