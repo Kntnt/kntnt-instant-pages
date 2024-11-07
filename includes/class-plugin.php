@@ -28,8 +28,15 @@ class Plugin {
 	 */
 	public function enqueue_scripts(): void {
 
-		// Skip if in admin or customizer
-		if ( is_admin() || is_customize_preview() ) {
+		/**
+		 * Filters whether to skip loading instant pages functionality.
+		 *
+		 * @param bool $is_skipping Whether to skip loading the instant pages script. Default false.
+		 */
+		$is_skipping = apply_filters( 'kntnt-instant-pages-skip', false );
+
+		// Skip if $is_skipping is true or in admin or customizer
+		if ( $is_skipping || is_admin() || is_customize_preview() ) {
 			return;
 		}
 

@@ -11,8 +11,8 @@
     "wp-coding-standards/wpcs": "^3.0"
   },
   "scripts": {
-    "phpcs": "phpcs -v -d memory_limit=512M --standard=WordPress -s includes/class-plugin.php",
-    "phpcbf": "phpcbf -d memory_limit=512M --standard=WordPress includes/class-plugin.php"
+    "phpcs": "phpcs -v -d memory_limit=512M --standard=WordPress -s kntnt-instant-pages.php includes/class-plugin.php",
+    "phpcbf": "phpcbf -d memory_limit=512M --standard=WordPress kntnt-instant-pages.php includes/class-plugin.php",
   },
   "config": {
     "allow-plugins": {
