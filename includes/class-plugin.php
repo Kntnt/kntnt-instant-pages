@@ -45,9 +45,9 @@ class Plugin {
 
 		// Configure script
 		wp_localize_script( handle: 'kntnt-instant-pages', object_name: 'kntntInstantPages', l10n: [
-				'speculationActive' => is_plugin_active( 'speculation-rules/load.php' ),
-				'instantPageUrl'    => "{$this->plugin_url}js/instant.page.js",
-			] );
+			'speculationActive' => is_plugin_active( 'speculation-rules/load.php' ),
+			'instantPageUrl'    => "{$this->plugin_url}js/instant.page.js",
+		] );
 
 	}
 
